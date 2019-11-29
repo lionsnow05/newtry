@@ -1,0 +1,71 @@
+<GridLayout rows="auto,*" backgroundcolor="lightgray" >
+  <StackLayout row="0" >
+<ActionBar class="action">
+<NavigationButton ios:visibility="collapsed" icon="res://menu" class="icon" (tap)="onDrawerButtonTap()"></NavigationButton>
+<Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+</ActionBar>
+</StackLayout>
+
+<ScrollView row="1">
+  <StackLayout>
+<GridLayout class="homeindex">
+    <Image src="~/images/ridings.jpg" ></Image>
+  <GridLayout  verticalAlignment="bottom">
+  <StackLayout>
+<Label text="PERFORMANCE"></Label>
+  </StackLayout>
+  </GridLayout>
+  </GridLayout>
+
+  <GridLayout columns="*,*" rows="*,*,*">
+
+    <GridLayout  row="0", col="0" padding="5" >
+    <StackLayout backgroundcolor="white">
+    <Image src="~/images/bike1.jpg"></Image>
+    <StackLayout>
+    <Label text="Etc.(8)" class="lbl"></Label>
+    </StackLayout>
+    </StackLayout>
+    </GridLayout>
+
+    <GridLayout  row="0", col="1" padding="5" >
+      <StackLayout backgroundcolor="white">
+      <Image src="~/images/bike2.jpg"></Image>
+      <StackLayout>
+      <Label text="Roubaix (8)" class="lbl"></Label>
+      </StackLayout>
+      </StackLayout>
+      </GridLayout>
+
+      <GridLayout  row="1", col="0" padding="5" >
+        <StackLayout backgroundcolor="white">
+        <Image src="~/images/bike3.jpg" (tap)="onTap('/bicycle/road/performance/shiv')"></Image>
+        <StackLayout>
+        <Label text="Shiv (6)" class="lbl"></Label>
+        </StackLayout>
+        </StackLayout>
+        </GridLayout>
+
+        <GridLayout  row="1", col="1" padding="5" >
+            <StackLayout backgroundcolor="white">
+          <Image src="~/images/bike11.jpg"></Image>
+          <StackLayout>
+          <Label text="Tarmac (16)" class="lbl"></Label>
+          </StackLayout>
+          </StackLayout>
+          </GridLayout>
+
+          <GridLayout  row="2", col="0" padding="5" >
+              <StackLayout backgroundcolor="white">
+            <Image src="~/images/bike12.jpg"></Image>
+            <StackLayout>
+            <Label text="Venge (5)" class="lbl"></Label>
+            </StackLayout>
+           </StackLayout>
+            </GridLayout>
+
+
+</GridLayout>
+</StackLayout>
+</ScrollView>
+</GridLayout>

@@ -1,0 +1,64 @@
+<GridLayout rows="auto,*" backgroundcolor="lightgray" >
+  <StackLayout row="0" >
+<ActionBar class="action">
+<NavigationButton ios:visibility="collapsed" icon="res://menu" class="icon" (tap)="onDrawerButtonTap()"></NavigationButton>
+<Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+</ActionBar>
+</StackLayout>
+
+<ScrollView row="1">
+  <StackLayout>
+<GridLayout class="homeindex">
+    <Image src="~/images/ridings.jpg" ></Image>
+  <GridLayout  verticalAlignment="bottom">
+  <StackLayout>
+<Label text="Road"></Label>
+  </StackLayout>
+  </GridLayout>
+      </GridLayout>
+
+  <GridLayout columns="*,*" rows="*,*">
+
+
+  <GridLayout  row="0", col="0" padding="5"  >
+    <StackLayout>
+  <Image src="~/images/bike7.jpg" (tap)="onTap('/bicycle/road/performance')"></Image>
+  <StackLayout backgroundcolor="white">
+  <Label text="Performance (44)" class="lbl"></Label>
+</StackLayout>
+</StackLayout>
+</GridLayout>
+
+
+  <GridLayout row="0", col="1" padding="5" >
+  <StackLayout>
+  <Image src="~/images/bike4.jpg"></Image>
+  <StackLayout backgroundcolor="white">
+  <Label text="Adventure & Gravel (11)" class="lbl"></Label>
+  </StackLayout>
+  </StackLayout>
+  </GridLayout>
+
+
+  <GridLayout row="1", col="0" padding="5" >
+  <StackLayout backgroundcolor="white">
+  <Image src="~/images/bike5.jpg"></Image>
+  <StackLayout>
+  <Label text="Cyclocross (5)" class="lbl"></Label>
+  </StackLayout>
+  </StackLayout>
+  </GridLayout>
+
+  <GridLayout row="1", col="1" padding="5" >
+  <StackLayout backgroundcolor="white">
+  <Image src="~/images/bike6.jpg"></Image>
+  <StackLayout>
+  <Label text="Triathlon (11)" class="lbl"></Label>
+  </StackLayout>
+  </StackLayout>
+  </GridLayout>
+
+  </GridLayout>
+  </StackLayout>
+</ScrollView>
+</GridLayout>

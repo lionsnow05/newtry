@@ -1,0 +1,66 @@
+
+<GridLayout rows="*,auto">
+  <StackLayout row="0">
+<ActionBar class="action">
+<NavigationButton ios:visibility="collapsed" icon="res://menu"  (tap)="onDrawerButtonTap()"></NavigationButton>
+<Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+</ActionBar>
+</StackLayout>
+
+<ScrollView>
+  <StackLayout>
+
+    <GridLayout class="hindex">
+     <Image src="~/images/overons1.jpg" stretch="aspectFill" ></Image>
+     <GridLayout rows="*,*" verticalAlignment="bottom">
+     <StackLayout row="0">
+     <Label text="News" class="lbl3" ></Label>
+     </StackLayout>
+     <StackLayout row="1">
+     <Label text="Keep up to date with the latest news" class="lbl3" ></Label>
+     </StackLayout>
+    </GridLayout>
+    </GridLayout>
+
+
+    <GridLayout class="homeindex">
+    <Image src="~/images/winteracties.jpg" (tap)="onItemTap('/news/winteracties')" stretch="aspectFill"></Image>
+  </GridLayout>
+      <StackLayout>
+        <Label text="Winter Promotions"></Label>
+      </StackLayout>
+      <StackLayout >
+        <Button text="Read More" class="read" (tap)="onItemTap('/news/winteracties')" width="150" height="50" horizontalAlignment="left"
+        backgroundcolor="black" color="white" ></Button>
+      </StackLayout>
+
+      <GridLayout class="homeindex">
+        <Image src="~/images/Retul.jpg" stretch="aspectFill"></Image>
+      </GridLayout>
+  <StackLayout>
+        <Label text="Our retül fit room has been updated." class="lbl"></Label>
+        <Label text="Do you want to sit more comfortably on the bike?" class="lbl"></Label>
+        <Label text="Do you want to do mileage like a pro?" class="lbl"></Label>
+        <Label text="Do you have neck or back complaints?" class="lbl"></Label>
+        <Label text="Then this is the solution" class="lbl"></Label>
+        <Button text="Read More" class="read"width="150" height="50" horizontalAlignment="left"
+      backgroundcolor="black" color="white"></Button>
+  </StackLayout>
+
+
+  <GridLayout class="homeindex">
+    <Image src="~/images/shoe.png" stretch="aspectFill" ></Image>
+    </GridLayout>
+    <StackLayout paddingRight="40">
+      <Label text="With only 150 grams, the S-Works EXOS is the lightest cycling shoe with a Boa® dial ever produced. Not only are they ridiculously light, but they still have all the functions that are synonymous with the S-Works label. They are still of World Tour level, but ridiculously light."
+      textWrap="true" class="lbl"></Label>
+      <Button text="Read More" class="read"width="150" height="50" horizontalAlignment="left"
+      backgroundcolor="black" color="white"></Button>
+    </StackLayout>
+    </StackLayout>
+
+</ScrollView>
+<StackLayout>
+  <router-outlet></router-outlet>
+</StackLayout>
+</GridLayout>

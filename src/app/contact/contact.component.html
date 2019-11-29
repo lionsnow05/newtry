@@ -1,0 +1,65 @@
+<GridLayout rows="*,auto">
+    <StackLayout row="0">
+  <ActionBar class="action">
+  <NavigationButton ios:visibility="collapsed" icon="res://menu" class="icon" (tap)="onDrawerButtonTap()"></NavigationButton>
+  <Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+  </ActionBar>
+  </StackLayout>
+
+  <ScrollView>
+    <StackLayout>
+        <GridLayout class="homeindex">
+            <Image src="~/images/race.jpg" stretch="aspectFill"></Image>
+            <GridLayout verticalAlignment="bottom">
+            <StackLayout>
+            <Label text="Questions or remarks? Do not hesitate and contact us." textWrap="true" class="lbl3"></Label>
+            </StackLayout>
+            </GridLayout>
+          </GridLayout>
+
+            <StackLayout padding="5">
+              <Label text="Opening hours may differ on or around public holidays." class="lbl1" textWrap="true"></Label>
+            </StackLayout>
+            <StackLayout padding="15">
+              <Label text="Specialized Brand Store" class="lbl1"></Label>
+              <Label text="Zandberg" class="lbl"></Label>
+              <Label text="BE-2260 Westerlo" class="lbl"></Label>
+              <Label text="Tel.014 54 33 58" class="lbl"></Label>
+              <Label text="info@4bikes.be" class="lbl"></Label>
+            </StackLayout>
+
+            <StackLayout padding="15">
+              <Label text="Opening Hours" class="lbl1"></Label>
+              <Label text="Monday: 09:00 - 12:00 and 13:00 - 18:00" class="lbl"></Label>
+              <Label text="Tuesday: Closed" class="lbl"></Label>
+              <Label text="Wednesday: 09:00 - 12:00 and 13:00 - 18:00" class="lbl"></Label>
+              <Label text="Thursday: 09:00 - 12:00 and 13: 00 - 18:00" class="lbl"></Label>
+              <Label text="Friday: 09:00 - 12:00 and 13:00 - 19:00" class="lbl"></Label>
+              <Label text="Saturday: 09:00 - 17:00" class="lbl"></Label>
+              <Label text="Sunday: Closed" class="lbl"></Label>
+            </StackLayout>
+
+            <StackLayout padding="15">
+              <Label text="Specialized Elite Shop" class="lbl1"></Label>
+              <Label text="Statiestraat 60" class="lbl"></Label>
+              <Label text="BE-2547 Lint" class="lbl"></Label>
+              <Label text="Tel. 03 455 11 65" class="lbl"></Label>
+              <Label text="lint@4bikes.be" class="lbl"></Label>
+            </StackLayout>
+
+            <StackLayout padding="15"><Label text="Visit the 4bikes Lint website!" class="lbl1"></Label></StackLayout>
+
+            <StackLayout padding="15">
+              <Label text="Opening hours" class="lbl1"></Label>
+              <Label text="Monday: Closed" class="lbl"></Label>
+              <Label text="Tuesday: 10:00 - 18:00" class="lbl"></Label>
+              <Label text="Wednesday: 10:00 - 18:00" class="lbl"></Label>
+              <Label text="Thursday: 10:00 - 18:00" class="lbl"></Label>
+              <Label text="Friday: 10:00 - 19:00" class="lbl"></Label>
+              <Label text="Saturday: 10:00 - 17:00" class="lbl"></Label>
+              <Label text="Sunday : Closed" class="lbl"></Label>
+            </StackLayout>
+
+    </StackLayout>
+  </ScrollView>
+</GridLayout>

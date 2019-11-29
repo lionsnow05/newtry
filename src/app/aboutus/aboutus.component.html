@@ -1,0 +1,102 @@
+<GridLayout rows="*,auto">
+    <StackLayout row="0">
+  <ActionBar class="action">
+  <NavigationButton ios:visibility="collapsed" icon="res://menu" class="icon" (tap)="onDrawerButtonTap()"></NavigationButton>
+  <Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+  </ActionBar>
+  </StackLayout>
+
+  <ScrollView>
+  <StackLayout rows="1">
+  <GridLayout class="homeindex">
+  <Image src="~/images/aboutus.jpg" stretch="aspectFill"></Image>
+  <GridLayout rows="*,*" verticalAlignment="bottom">
+  <StackLayout row="0">
+  <Label text="About Us" class="lbl"></Label>
+  </StackLayout>
+  <StackLayout row="1">
+      <Label text="Specialized Brand Store in Westerlo- 750m² of shopping pleasure" class="lbl" textWrap="true"></Label>
+  </StackLayout>
+  </GridLayout>
+  </GridLayout>
+
+  <GridLayout class="homeindex" >
+      <Image src="~/images/ftr.jpg" stretch="aspectFill"></Image>
+      </GridLayout>
+
+  <StackLayout padding="15">
+    <Label text="The Specialized Brand Store in Westerlo is no less than 750 m² in size and spread over 2 floors."
+    textWrap="true" class="lbl"></Label>
+    <Label text="The ground floor is entirely devoted to Race, MTB, Leisure and children's bicycles. The upper floor is colored by Specialized and custom cycling clothing, a wide range of helmets and an extensive shoe department. Ladies can visit our separate Womens corner"
+    textWrap="true" class="lbl"></Label>
+    <Label text="Last but not least, a completely renewed and specially equipped Retül measuring room to measure our customers even more accurately and to be able to adjust their very best cycling position."
+    textWrap="true" class="lbl"></Label>
+    <Label text="And all this with a Top TEAM that guarantees the best service." textWrap="true" class="lbl"></Label>
+  </StackLayout>
+
+  <GridLayout class="homeindex">
+      <Image src="~/images/mount.jpg" stretch="aspectFill"></Image>
+      </GridLayout>
+<StackLayout padding="15">
+  <Label text="Test your dream bike" class="lbl1"></Label>
+    <Label text="Do you want to test the latest Specialized racing bikes or mountain bikes? With us this is possible! Our expert staff are ready to adjust your test bike perfectly for you and to answer any questions skillfully."
+    class="lbl" textWrap="true"></Label>
+    <Label text="Come and test the latest Epic on a technical single track, or the Tarmac on a steep climb. They are entirely at your disposal. Our E-bike department is also starting to become more important and important today. Test the Vado's, Como's and Levo's with us today."
+    class="lbl" textWrap="true"></Label>
+    <Button text="More Information" class="read"width="180" height="50" horizontalAlignment="left"
+    backgroundcolor="black" color="white"></Button>
+  </StackLayout>
+
+  <GridLayout class="homeindex">
+      <Image src="~/images/fietsen26.jpg" stretch="aspectFill"></Image>
+      </GridLayout>
+      <StackLayout padding="15">
+          <Label text="Tech Area + SBCU" class="lbl1"></Label>
+          <Label text="Specialized Brand Store Westerlo stands for high-quality repairs and for fast and professional service. Racing bikes and mountain bikes are fully assembled here. All components are present in the Tech Area. Moreover, our employees are regularly trained to be able to continue working at the highest level."
+          textwrap="true" class="lbl"></Label>
+          <Button text="Shimano Service Center" class="read" width="250" height="50" horizontalAlignment="left"
+    backgroundcolor="black" color="white"></Button>
+      </StackLayout>
+
+      <GridLayout class="homeindex">
+          <Image src="~/images/Retul.jpg" stretch="aspectFill"></Image>
+          </GridLayout>
+          <StackLayout padding="20">
+              <Label text="Retül Measurement" class="lbl1"></Label>
+              <Label text="Retül is the first complete bike-fit 3D measuring system specially developed for position measurements with cyclists. The Retül Meting starts with an introductory conversation where the emphasis is on your cycling past, cycling goals, cycling experience and (any) injuries you sustained in the past, etc"
+              textwrap="true" class="lbl"></Label>
+              <Label text="To be able to adjust your bike to your body, we look at your flexibility and body structure. Your knees and hips are screened for their flexibility, your legs for a possible leg length difference, ..."
+              textwrap="true" class="lbl"></Label>
+              <Label text="What follows is a dynamic analysis of your current cycling position. Not only the position of your saddle, handlebars and the size of your frame, but also about the angle of rotation of your leg, the position of your back, the proportional push and pull of both legs and the placement of your cleats."
+              textwrap="true" class="lbl"></Label>
+              <Button text="Make an Appointment" class="read"width="200" height="50" horizontalAlignment="left"
+                backgroundcolor="black" color="white"></Button>
+                </StackLayout>
+
+     <GridLayout class="homeindex">
+    <Image src="~/images/vanomobil.jpg" stretch="aspectFill"></Image>
+    <GridLayout rows="*,*" verticalAlignment="bottom">
+    <StackLayout row="0">
+    <Label text="MTB VANOMOBIL"></Label>
+    </StackLayout>
+    <StackLayout row="1">
+    <Label text="The cooperation between Vanomobil MTB Cycling Team and 4bikes Westerlo has been running for 7 years." textWrap="true"></Label>
+    </StackLayout>
+    </GridLayout>
+    </GridLayout>
+
+    <GridLayout class="homeindex">
+        <Image src="~/images/westfit.png" stretch="aspectFill"></Image>
+        <GridLayout rows="*,*" verticalAlignment="bottom">
+        <StackLayout row="0">
+        <Label text="TEAM WESTFIT"></Label>
+        </StackLayout>
+        <StackLayout row="1">
+        <Label text="A nice sports club in Westerlo. Westfit brings sports to all ages: swimming, walking and of course BIKING." textWrap="true"></Label>
+        </StackLayout>
+        </GridLayout>
+        </GridLayout>
+
+</StackLayout>
+</ScrollView>
+</GridLayout>

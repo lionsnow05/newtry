@@ -1,0 +1,35 @@
+ <GridLayout rows="*,auto">
+       <StackLayout row="0">
+<ActionBar class="action">
+     <NavigationButton ios:visibility="collapsed" icon="res://menu"  (tap)="onDrawerButtonTap()"></NavigationButton>
+    <Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+</ActionBar>
+ </StackLayout>
+
+<ScrollView>
+    <StackLayout row="1" padding="8">
+<RadListView [items]="bikes" marginRight="-2">
+        <ListViewGridLayout tkListViewLayout scrollDirection="Vertical"
+         spanCount="1">
+    </ListViewGridLayout>
+        <ng-template tkListItemTemplate let-item="item">
+            <GridLayout backgroundColor="White">
+                <GridLayout>
+                <android>
+                <Image src="{{ item.imageSrc }}" stretch="aspectFill" height="300" width="400"></Image>
+                </android>
+
+        <GridLayout verticalAlignment="bottom">
+          <StackLayout paddingTop="8" paddingBottom="8" paddingLeft="16" paddingRight="16">
+                  <Label text="{{item.name}}" class="bikeName" ></Label>
+                  <Label text="{{item.description}}" class="bikeDetail" textWrap="true"></Label>
+          </StackLayout>
+
+        </GridLayout>
+    </GridLayout>
+</GridLayout>
+        </ng-template>
+</RadListView>
+    </StackLayout>
+</ScrollView>
+</GridLayout>

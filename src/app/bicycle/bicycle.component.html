@@ -1,0 +1,82 @@
+<GridLayout rows="*,auto" backgroundcolor="lightgray">
+  <StackLayout row="0">
+<ActionBar class="action">
+<NavigationButton ios:visibility="collapsed" icon="res://menu" class="icon" (tap)="onDrawerButtonTap()"></NavigationButton>
+<Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+</ActionBar>
+</StackLayout>
+
+<ScrollView>
+    <StackLayout>
+
+    <GridLayout class="homeindex">
+    <Image src="~/images/road.jpg" (tap)="onItemTap('/bicycle/road')" stretch="aspectFill"></Image>
+    <GridLayout verticalAlignment="bottom">
+    <StackLayout>
+    <Label text="Road" class="lbl3"></Label>
+    </StackLayout>
+    </GridLayout>
+  </GridLayout>
+
+
+        <GridLayout class="homeindex">
+      <Image src="~/images/mountain.jpg" stretch="aspectFill"></Image>
+    <GridLayout rows="*,*" verticalAlignment="bottom">
+    <StackLayout rows="0">
+<Label text="Mountain" class="lbl3"></Label>
+    </StackLayout>
+    </GridLayout>
+        </GridLayout>
+
+        <GridLayout class="homeindex">
+            <Image src="~/images/mount2.jpg" stretch="aspectFill"></Image>
+          <GridLayout rows="*,*" verticalAlignment="bottom">
+          <StackLayout rows="0">
+      <Label text="Fitness" class="lbl3"></Label>
+          </StackLayout>
+          </GridLayout>
+          </GridLayout>
+
+      <GridLayout class="homeindex">
+      <Image src="~/images/children.jpg" stretch="aspectFill"></Image>
+      <GridLayout rows="*,*" verticalAlignment="bottom">
+      <StackLayout rows="0">
+      <Label text="Children" class="lbl3"></Label>
+      </StackLayout>
+      </GridLayout>
+      </GridLayout>
+
+      <GridLayout class="homeindex">
+      <Image src="~/images/electric.jpg" stretch="aspectFill"></Image>
+      <GridLayout rows="*,*" verticalAlignment="bottom">
+      <StackLayout rows="0">
+      <Label text="Electric" class="lbl3"></Label>
+      </StackLayout>
+      </GridLayout>
+      </GridLayout>
+
+     <GridLayout class="homeindex">
+     <Image src="~/images/custom.png" stretch="aspectFill"></Image>
+     <GridLayout verticalAlignment="bottom">
+     <StackLayout>
+     <Label text="Custom" class="lbl3"></Label>
+     </StackLayout>
+     </GridLayout>
+     </GridLayout>
+
+     <GridLayout class="homeindex">
+       <StackLayout backgroundcolor="white">
+        <Image src="~/images/fietsen26.jpg" stretch="aspectFill"></Image>
+      <StackLayout>
+      <Label text="End of Series, Test and 2nd hand bikes" textWrap="true" class="lbl3"></Label>
+      </StackLayout>
+       </StackLayout>
+        </GridLayout>
+
+</StackLayout>
+</ScrollView>
+<StackLayout>
+  <router-outlet></router-outlet>
+</StackLayout>
+</GridLayout>
+
