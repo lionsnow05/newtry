@@ -10,7 +10,7 @@ of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme.
 */
 
-@import '~nativescript-theme-core/css/core.light.css';
+@import '~nativescript-theme-core/css/core.dark.css';
 
 /*
 For example, the following CSS rule changes the font size of all UI
@@ -25,11 +25,11 @@ components that have the btn class name.
     height: 70;
     text-align: center;
     vertical-align: center;
-    background-color: lightblue;
+    background-color: black;
 }
 
 .-selected{
-    background-color: lightgray;
+    background-color: darkslategray;
 }
 
 .drawertext {
@@ -37,6 +37,7 @@ components that have the btn class name.
     padding: 10;
     text-align: center;
     vertical-align: center;
+    color: white;
 }
 
 /* .sideLightGrayLabel {
@@ -59,13 +60,6 @@ components that have the btn class name.
     margin-right: 10;
 }
 
-.icon
-{
-    width: 40;
-    height: 40;
-    background-color: black;
-}
-
 .nav
 {
     height: 40;
@@ -76,24 +70,23 @@ components that have the btn class name.
 .bottomtext{
     text-align: center;
     padding: 5;
+    color: white;
 }
 
 .bikeName{
-    color:  black;
-    font-family: 'Nordica Plus', 'nordicaclassicltext';
+    color:  white;
     font-weight: bold;
-    font-size: 20;
+    font-size: 40;
 }
 
 .bikeDetail {
-    color:  black;
-    font-family: 'Nordica Plus', 'nordicaclassicltext';
-    font-size: 13;
+    color:  white;
+    font-size: 14;
     text-transform: uppercase;
 }
 
 .homeindex{
-    font-size: 15;
+    font-size: 12;
     color: white;
     margin-bottom: 10;
 }
@@ -105,14 +98,12 @@ components that have the btn class name.
 }
 
 .action {
-    background-color: lightgray;
+    background-color: black;
 
 }
 
 .stackcolor {
-    background-color: white;
-
-
+    background-color: black;
 }
 
 .hindex{
@@ -143,4 +134,48 @@ components that have the btn class name.
     font-family: 'Times New Roman', Times, serif;
     font-size: 15;
     color: black;
+}
+
+.sidedrawer-icon {
+    font-size: 22;
+    width: 40;
+    height: 30;
+    vertical-align: center;
+    color: white;
+
+}
+
+.hr {
+    background-color: white;
+    padding-bottom: 1;
+}
+
+.sidedrawer {
+    color: white;
+    font-size: 20;
+    text-align: center;
+    background-color: black;
+}
+
+.tapbutton {
+    color: white;
+    background-color: black;
+
+}
+
+.select {
+    background-color: rgb(14, 219, 219);
+}
+
+.faroad{
+    font-size: 17;
+    border-radius: 50%;
+    border-width: 2;
+    border-color: #393b3f;
+    width: 45;
+    height: 45;
+    background-color: #393b3f;
+    vertical-align: center;
+    color: white;
+    text-align: center;
 }

@@ -1,10 +1,15 @@
 <GridLayout rows="*,auto" backgroundcolor="lightgray">
-  <StackLayout row="0">
-<ActionBar class="action">
-<NavigationButton ios:visibility="collapsed" icon="res://menu" class="icon" (tap)="onDrawerButtonTap()"></NavigationButton>
-<Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
-</ActionBar>
-</StackLayout>
+    <StackLayout row="0">
+        <ActionBar class="action">
+            <StackLayout orientation="horizontal">
+                <GridLayout>
+            <Label text="&#xf0c9;" class="fa sidedrawer-icon" (tap)="onDrawerButtonTap()" horizontalAlignment="left" ></Label>
+            <Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+           <Button text="Share" (tap)="shareUrl()" horizontalAlignment="right" color="white" backgroundcolor="black" ></Button>
+       </GridLayout>
+       </StackLayout>
+       </ActionBar>
+       </StackLayout>
 
 <ScrollView>
     <StackLayout>
@@ -20,25 +25,25 @@
 
 
         <GridLayout class="homeindex">
-      <Image src="~/images/mountain.jpg" stretch="aspectFill"></Image>
+      <Image src="~/images/mountain.jpg" (tap)="onItemTap('/bicycle/road')" stretch="aspectFill"></Image>
     <GridLayout rows="*,*" verticalAlignment="bottom">
-    <StackLayout rows="0">
+    <StackLayout>
 <Label text="Mountain" class="lbl3"></Label>
     </StackLayout>
     </GridLayout>
         </GridLayout>
 
         <GridLayout class="homeindex">
-            <Image src="~/images/mount2.jpg" stretch="aspectFill"></Image>
+            <Image src="~/images/mount2.jpg" (tap)="onItemTap('/bicycle/road')" stretch="aspectFill"></Image>
           <GridLayout rows="*,*" verticalAlignment="bottom">
-          <StackLayout rows="0">
+          <StackLayout>
       <Label text="Fitness" class="lbl3"></Label>
           </StackLayout>
           </GridLayout>
           </GridLayout>
 
       <GridLayout class="homeindex">
-      <Image src="~/images/children.jpg" stretch="aspectFill"></Image>
+      <Image src="~/images/children.jpg" (tap)="onItemTap('/bicycle/road')" stretch="aspectFill"></Image>
       <GridLayout rows="*,*" verticalAlignment="bottom">
       <StackLayout rows="0">
       <Label text="Children" class="lbl3"></Label>
@@ -47,16 +52,16 @@
       </GridLayout>
 
       <GridLayout class="homeindex">
-      <Image src="~/images/electric.jpg" stretch="aspectFill"></Image>
+      <Image src="~/images/electric.jpg" (tap)="onItemTap('/bicycle/road')" stretch="aspectFill"></Image>
       <GridLayout rows="*,*" verticalAlignment="bottom">
-      <StackLayout rows="0">
+      <StackLayout>
       <Label text="Electric" class="lbl3"></Label>
       </StackLayout>
       </GridLayout>
       </GridLayout>
 
      <GridLayout class="homeindex">
-     <Image src="~/images/custom.png" stretch="aspectFill"></Image>
+     <Image src="~/images/custom.png" (tap)="onItemTap('/bicycle/road')" stretch="aspectFill"></Image>
      <GridLayout verticalAlignment="bottom">
      <StackLayout>
      <Label text="Custom" class="lbl3"></Label>
@@ -66,12 +71,47 @@
 
      <GridLayout class="homeindex">
        <StackLayout backgroundcolor="white">
-        <Image src="~/images/fietsen26.jpg" stretch="aspectFill"></Image>
+        <Image src="~/images/fietsen26.jpg" (tap)="onItemTap('/bicycle/road')" stretch="aspectFill"></Image>
       <StackLayout>
       <Label text="End of Series, Test and 2nd hand bikes" textWrap="true" class="lbl3"></Label>
       </StackLayout>
        </StackLayout>
         </GridLayout>
+
+<StackLayout row="1" orientation="horizontal">
+  <GridLayout columns="*,*,*" class="tap" backgroundcolor="white">
+    <StackLayout col="0" row="0">
+      <Button text="&#xf048;" class="fa sidedrawer" width="60" height="50"></Button>
+    </StackLayout>
+
+    <StackLayout col="1" row="0">
+      <GridLayout columns="*,*,*,*">
+        <StackLayout col="0" row="0" >
+            <Button text="1" class="tapbutton select"></Button>
+        </StackLayout>
+
+        <StackLayout col="1" row="0">
+            <Button text="2" class="tapbutton"></Button>
+        </StackLayout>
+
+        <StackLayout col="2" row="0">
+            <Button text="3" class="tapbutton"></Button>
+        </StackLayout>
+
+        <StackLayout col="3" row="0">
+            <Button text="4" class="tapbutton"></Button>
+        </StackLayout>
+
+      </GridLayout>
+
+    </StackLayout>
+
+    <StackLayout col="2" row="0">
+      <Button text="&#xf051;" class="fa sidedrawer" width="60" height="50"></Button>
+    </StackLayout>
+
+  </GridLayout>
+</StackLayout>
 
 </StackLayout>
 </ScrollView>
@@ -79,4 +119,3 @@
   <router-outlet></router-outlet>
 </StackLayout>
 </GridLayout>
-

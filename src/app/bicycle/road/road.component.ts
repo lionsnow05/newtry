@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
-import * as app from "tns-core-modules/application";
 import { RouterExtensions } from 'nativescript-angular/router';
+import * as SocialShare from "nativescript-social-share";
 
 @Component({
   selector: 'road',
@@ -10,7 +9,7 @@ import { RouterExtensions } from 'nativescript-angular/router';
 })
 export class RoadComponent implements OnInit {
 
-  constructor(private _route: RouterExtensions) { }
+  constructor(private _route: RouterExtensions, private router: RouterExtensions) { }
 
   ngOnInit() {
   }
@@ -19,8 +18,10 @@ export class RoadComponent implements OnInit {
 
 }
 
-  onDrawerButtonTap(): void {
-    const sideDrawer = <RadSideDrawer>app.getRootView();
-    sideDrawer.showDrawer();
+onBack(): void {
+    this.router.back();
+}
+public shareUrl() {
+    SocialShare.shareUrl("https://www.4bikes.be/product-category/road/", "4bikes road", "Share");
 }
 }

@@ -3,6 +3,7 @@ import { RadSideDrawer} from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
 import { RouterExtensions } from 'nativescript-angular/router';
 import { Router } from '@angular/router';
+import * as SocialShare from "nativescript-social-share";
 
 @Component({
   selector: 'bicycle',
@@ -22,6 +23,9 @@ export class BicycleComponent implements OnInit {
   onDrawerButtonTap(): void {
     const sideDrawer = <RadSideDrawer>app.getRootView();
     sideDrawer.showDrawer();
+}
+public shareUrl() {
+    SocialShare.shareUrl("https://www.4bikes.be/fietsen/", "4bikes fietsen", "Share");
 }
 
 }

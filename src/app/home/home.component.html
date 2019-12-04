@@ -1,35 +1,73 @@
- <GridLayout rows="*,auto">
-       <StackLayout row="0">
-<ActionBar class="action">
-     <NavigationButton ios:visibility="collapsed" icon="res://menu"  (tap)="onDrawerButtonTap()"></NavigationButton>
-    <Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+ <GridLayout rows="*,auto" backgroundcolor="lightgray">
+<StackLayout row="0">
+ <ActionBar class="action">
+     <StackLayout orientation="horizontal">
+         <GridLayout>
+     <Label text="&#xf0c9;" class="fa sidedrawer-icon" (tap)="onDrawerButtonTap()" horizontalAlignment="left" ></Label>
+     <Image src="res://logo1"  stretch="aspectFill" class="logo"></Image>
+
+</GridLayout>
+</StackLayout>
 </ActionBar>
- </StackLayout>
+</StackLayout>
 
 <ScrollView>
-    <StackLayout row="1" padding="8">
-<RadListView [items]="bikes" marginRight="-2">
-        <ListViewGridLayout tkListViewLayout scrollDirection="Vertical"
-         spanCount="1">
-    </ListViewGridLayout>
-        <ng-template tkListItemTemplate let-item="item">
-            <GridLayout backgroundColor="White">
-                <GridLayout>
-                <android>
-                <Image src="{{ item.imageSrc }}" stretch="aspectFill" height="300" width="400"></Image>
-                </android>
+    <StackLayout>
 
-        <GridLayout verticalAlignment="bottom">
-          <StackLayout paddingTop="8" paddingBottom="8" paddingLeft="16" paddingRight="16">
-                  <Label text="{{item.name}}" class="bikeName" ></Label>
-                  <Label text="{{item.description}}" class="bikeDetail" textWrap="true"></Label>
-          </StackLayout>
+    <GridLayout padding="5">
+    <Image src="~/images/image.jpg" stretch="aspectFill"  (tap)="onItemTap('/bicycle/road')" ></Image>
+    <StackLayout>
+    <Button text="&#xf064;" class="fa faroad" (tap)="shareUrl()" horizontalAlignment="right" verticalAlignment="top" color="white"></Button>
+    </StackLayout>
+    <GridLayout rows="*,*" verticalAlignment="bottom">
+    <StackLayout row="0">
+    <Label text="Road" class="bikeName" ></Label>
+    </StackLayout>
+    <StackLayout row="1">
+    <Label text="How do you describe a racing bike? is it a machine? A tool? Or is it an extension of the body?"
+     textWrap="true" class="bikeDetail" ></Label>
+    </StackLayout>
 
-        </GridLayout>
     </GridLayout>
-</GridLayout>
-        </ng-template>
-</RadListView>
+    </GridLayout>
+
+<GridLayout padding="5">
+    <Image src="~/images/mount.jpg" stretch="aspectFill"  (tap)="onItemTap('/bicycle/road')"></Image>
+    <GridLayout rows="*,*" verticalAlignment="bottom">
+    <StackLayout row="0">
+    <Label text="Mountain" class="bikeName" ></Label>
+    </StackLayout>
+    <StackLayout row="1">
+    <Label text="Whether you want to fly up quickly and efficiently, tame every downhill you encounter, or both."
+     textWrap="true" class="bikeDetail" ></Label>
+    </StackLayout>
+    </GridLayout>
+    </GridLayout>
+
+<GridLayout padding="5">
+    <Image src="~/images/mount1.jpg" stretch="aspectFill"  (tap)="onItemTap('/bicycle/road')"></Image>
+    <GridLayout rows="*,*" verticalAlignment="bottom">
+    <StackLayout row="0">
+    <Label text="Electric" class="bikeName" ></Label>
+    </StackLayout>
+    <StackLayout row="1">
+    <Label text="We design e-Bikes with the slogan: You, Only Faster. We do this with our integrated Specialized e-Bike technology system." textWrap="true" class="bikeDetail" ></Label>
+    </StackLayout>
+    </GridLayout>
+    </GridLayout>
+
+<GridLayout padding="5">
+    <Image src="~/images/mount2.jpg" stretch="aspectFill"  (tap)="onItemTap('/bicycle/road')"></Image>
+    <GridLayout rows="*,*" verticalAlignment="bottom">
+    <StackLayout row="0">
+    <Label text="Fitness" class="bikeName" ></Label>
+    </StackLayout>
+    <StackLayout row="1">
+    <Label text="Fitness knows no limits for us. Not mentally, not gographically and certainly not mechanically." textWrap="true" class="bikeDetail" ></Label>
+    </StackLayout>
+    </GridLayout>
+    </GridLayout>
+
     </StackLayout>
 </ScrollView>
 </GridLayout>

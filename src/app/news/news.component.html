@@ -1,11 +1,16 @@
 
 <GridLayout rows="*,auto">
-  <StackLayout row="0">
-<ActionBar class="action">
-<NavigationButton ios:visibility="collapsed" icon="res://menu"  (tap)="onDrawerButtonTap()"></NavigationButton>
-<Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
-</ActionBar>
-</StackLayout>
+    <StackLayout row="0">
+        <ActionBar class="action">
+            <StackLayout orientation="horizontal">
+                <GridLayout>
+            <Label text="&#xf0c9;" class="fa sidedrawer-icon" (tap)="onDrawerButtonTap()" horizontalAlignment="left" ></Label>
+            <Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+           <Button text="Share" (tap)="shareUrl()" horizontalAlignment="right" color="white" backgroundcolor="black" ></Button>
+       </GridLayout>
+       </StackLayout>
+       </ActionBar>
+       </StackLayout>
 
 <ScrollView>
   <StackLayout>
@@ -24,18 +29,18 @@
 
 
     <GridLayout class="homeindex">
-    <Image src="~/images/winteracties.jpg" (tap)="onItemTap('/news/winteracties')" stretch="aspectFill"></Image>
+    <Image src="~/images/winteracties.jpg" (tap)="onTap('/news/winteracties')" stretch="aspectFill"></Image>
   </GridLayout>
       <StackLayout>
         <Label text="Winter Promotions"></Label>
       </StackLayout>
       <StackLayout >
-        <Button text="Read More" class="read" (tap)="onItemTap('/news/winteracties')" width="150" height="50" horizontalAlignment="left"
+        <Button text="Read More" class="read" (tap)="onTap('/news/winteracties')" width="150" height="50" horizontalAlignment="left"
         backgroundcolor="black" color="white" ></Button>
       </StackLayout>
 
       <GridLayout class="homeindex">
-        <Image src="~/images/Retul.jpg" stretch="aspectFill"></Image>
+        <Image src="~/images/Retul.jpg" stretch="aspectFill" (tap)="onTap('/news/winteracties')"></Image>
       </GridLayout>
   <StackLayout>
         <Label text="Our retül fit room has been updated." class="lbl"></Label>
@@ -44,18 +49,18 @@
         <Label text="Do you have neck or back complaints?" class="lbl"></Label>
         <Label text="Then this is the solution" class="lbl"></Label>
         <Button text="Read More" class="read"width="150" height="50" horizontalAlignment="left"
-      backgroundcolor="black" color="white"></Button>
+      backgroundcolor="black" color="white" (tap)="onTap('/news/winteracties')"></Button>
   </StackLayout>
 
 
   <GridLayout class="homeindex">
-    <Image src="~/images/shoe.png" stretch="aspectFill" ></Image>
+    <Image src="~/images/shoe.png" stretch="aspectFill" (tap)="onTap('/news/winteracties')"></Image>
     </GridLayout>
     <StackLayout paddingRight="40">
       <Label text="With only 150 grams, the S-Works EXOS is the lightest cycling shoe with a Boa® dial ever produced. Not only are they ridiculously light, but they still have all the functions that are synonymous with the S-Works label. They are still of World Tour level, but ridiculously light."
       textWrap="true" class="lbl"></Label>
-      <Button text="Read More" class="read"width="150" height="50" horizontalAlignment="left"
-      backgroundcolor="black" color="white"></Button>
+      <Button text="Read More" class="read" width="150" height="50" horizontalAlignment="left"
+      backgroundcolor="black" color="white" (tap)="onTap('/news/winteracties')"></Button>
     </StackLayout>
     </StackLayout>
 

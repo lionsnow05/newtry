@@ -32,9 +32,7 @@ export class AppComponent implements AfterViewInit, OnInit {
             .pipe(filter((event: any)=> event instanceof NavigationEnd))
             .subscribe((event: NavigationEnd)=> this._activatedUrl = event.urlAfterRedirects);
         }
-
-
-               isComponentSelected(url: string): boolean {
+             isComponentSelected(url: string): boolean {
                    return this._activatedUrl == url;
                }
                onNavItemTap(_route: String): void{

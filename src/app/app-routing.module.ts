@@ -17,22 +17,15 @@ import { ShivComponent } from "./bicycle/road/performance/shiv/shiv.component";
 const routes: Routes = [
     { path: "", redirectTo: "/home", pathMatch: "full" },
     { path: "home", component: HomeComponent },
-    { path: "bicycle", component: BicycleComponent,
-    children: [
-        { path: "road", component: RoadComponent},
-        { path: "road/performance", component: PerformanceComponent},
-        { path: "road/performance/shiv", component: ShivComponent}
-    ]
-},
-
+    { path: "bicycle", component: BicycleComponent },
+    { path: "bicycle/road", component: RoadComponent},
+    { path: "bicycle/road/performance", component: PerformanceComponent},
+    { path: "bicycle/road/performance/shiv", component: ShivComponent},
     { path: "aboutus", component: AboutusComponent},
     { path: "contact", component: ContactComponent},
-    { path: "news", component: NewsComponent,
-    children: [
-        { path: "winteracties", component: WinteractiesComponent }
-    ]
+    { path: "news", component: NewsComponent },
+    { path: "news/winteracties", component: WinteractiesComponent }
 
-}
 ];
 
 @NgModule({

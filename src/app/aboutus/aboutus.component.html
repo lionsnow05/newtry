@@ -1,10 +1,15 @@
 <GridLayout rows="*,auto">
     <StackLayout row="0">
-  <ActionBar class="action">
-  <NavigationButton ios:visibility="collapsed" icon="res://menu" class="icon" (tap)="onDrawerButtonTap()"></NavigationButton>
-  <Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
-  </ActionBar>
-  </StackLayout>
+        <ActionBar class="action">
+            <StackLayout orientation="horizontal">
+                <GridLayout>
+            <Label text="&#xf0c9;" class="fa sidedrawer-icon" (tap)="onDrawerButtonTap()" horizontalAlignment="left" ></Label>
+            <Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+           <Button text="Share" (tap)="shareUrl()" horizontalAlignment="right" color="white" backgroundcolor="black" ></Button>
+       </GridLayout>
+       </StackLayout>
+       </ActionBar>
+       </StackLayout>
 
   <ScrollView>
   <StackLayout rows="1">
@@ -44,7 +49,7 @@
     <Label text="Come and test the latest Epic on a technical single track, or the Tarmac on a steep climb. They are entirely at your disposal. Our E-bike department is also starting to become more important and important today. Test the Vado's, Como's and Levo's with us today."
     class="lbl" textWrap="true"></Label>
     <Button text="More Information" class="read"width="180" height="50" horizontalAlignment="left"
-    backgroundcolor="black" color="white"></Button>
+    backgroundcolor="black" color="white" (tap)="onTap('/bicycle/road/performance')"></Button>
   </StackLayout>
 
   <GridLayout class="homeindex">
@@ -55,7 +60,7 @@
           <Label text="Specialized Brand Store Westerlo stands for high-quality repairs and for fast and professional service. Racing bikes and mountain bikes are fully assembled here. All components are present in the Tech Area. Moreover, our employees are regularly trained to be able to continue working at the highest level."
           textwrap="true" class="lbl"></Label>
           <Button text="Shimano Service Center" class="read" width="250" height="50" horizontalAlignment="left"
-    backgroundcolor="black" color="white"></Button>
+    backgroundcolor="black" color="white" (tap)="onTap('/bicycle/road/performance')"></Button>
       </StackLayout>
 
       <GridLayout class="homeindex">
@@ -70,7 +75,7 @@
               <Label text="What follows is a dynamic analysis of your current cycling position. Not only the position of your saddle, handlebars and the size of your frame, but also about the angle of rotation of your leg, the position of your back, the proportional push and pull of both legs and the placement of your cleats."
               textwrap="true" class="lbl"></Label>
               <Button text="Make an Appointment" class="read"width="200" height="50" horizontalAlignment="left"
-                backgroundcolor="black" color="white"></Button>
+                backgroundcolor="black" color="white" (tap)="onTap('/bicycle/road/performance')"></Button>
                 </StackLayout>
 
      <GridLayout class="homeindex">

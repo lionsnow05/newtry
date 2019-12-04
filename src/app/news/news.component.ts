@@ -3,6 +3,7 @@ import { RadSideDrawer} from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
 import { RouterExtensions } from 'nativescript-angular/router';
 import { Router } from '@angular/router';
+import * as SocialShare from "nativescript-social-share";
 
 
 @Component({
@@ -12,12 +13,11 @@ import { Router } from '@angular/router';
 })
 export class NewsComponent implements OnInit {
 
-  constructor(private _changeDetectionRef: ChangeDetectorRef, private _route: RouterExtensions, public router
-    : Router) { }
+  constructor( private _route: RouterExtensions) { }
 
   ngOnInit() {
   }
-  onItemTap(_route: String): void{
+  onTap(_route: String): void{
     this._route.navigate([_route]);
 
 }
@@ -25,5 +25,7 @@ onDrawerButtonTap(): void {
     const sideDrawer = <RadSideDrawer>app.getRootView();
     sideDrawer.showDrawer();
 }
-
+public shareUrl() {
+    SocialShare.shareUrl("https://www.4bikes.be/nieuws/", "4bikes", "Share");
+}
 }

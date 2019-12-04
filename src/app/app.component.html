@@ -1,7 +1,7 @@
 <RadSideDrawer>
 <GridLayout tkDrawerContent rows="auto,*" class="maincontent">
     <StackLayout row="0" class="titlemaincontent">
-        <Label text="Navigation"></Label>
+            <Image src='~/images/logo2.png'></Image>
         <hr>
         </StackLayout>
 
@@ -10,39 +10,37 @@
 
                 <GridLayout columns="auto,*" class="drawertext" (tap)="onNavItemTap('/home')"
                 [class.-selected]="isComponentSelected('/home')">
-                 <Image  src="res://home1" class="iconimg"></Image>
+                <Label col="0" text="&#xf015;" class="fa sidedrawer-icon"></Label>
                 <Label col="1" text="Home"></Label>
                 </GridLayout>
-
+                <StackLayout class="hr"></StackLayout>
 
                <GridLayout columns="auto,*" class="drawertext" (tap)="onNavItemTap('/news')"
                 [class.-selected]="isComponentSelected('/news')">
-                 <Image col="0" src="res://news" stretch="aspectFill" class="iconimg"></Image>
+                <Label col="0" text="&#xf1ea;" class="fa sidedrawer-icon"></Label>
                 <Label col="1" text="News"></Label>
                 </GridLayout>
                 <StackLayout class="hr"></StackLayout>
 
-               <GridLayout columns="auto,*" class="drawertext"(tap)="onNavItemTap('/bicycles')"
-                [class.-selected]="isComponentSelected('/bicycles')">
-                 <Image col="0" src="res://feature" stretch="aspectFill" class="iconimg"></Image>
-                <Label col="1" text="Bicycles"></Label>
+               <GridLayout columns="auto,*" class="drawertext"(tap)="onNavItemTap('/bicycle')"
+                [class.-selected]="isComponentSelected('/bicycle')">
+                <Label col="0" text="&#xf206;" class="fa sidedrawer-icon"></Label>
+                <Label col="1" text="Bicycle"></Label>
                 </GridLayout>
                 <StackLayout class="hr"></StackLayout>
 
                 <GridLayout columns="auto,*" class="drawertext" (tap)="onNavItemTap('/aboutus')"
                 [class.-selected]="isComponentSelected('/aboutus')">
-                <Image col="0" src="res://about" stretch="aspectFill" class="iconimg"></Image>
+                <Label col="0" text="&#xf129;" class="fa sidedrawer-icon"></Label>
                 <Label col="1" text="About Us"></Label>
                 </GridLayout>
                 <StackLayout class="hr"></StackLayout>
 
                 <GridLayout columns="auto,*" class="drawertext" (tap)="onNavItemTap('/contact')"
                 [class.-selected]="isComponentSelected('/contact')">
-                <Image col="0" src="res://contact" stretch="aspectFill" class="iconimg"></Image>
+                <Label col="0" text="&#xf2b9;" class="fa sidedrawer-icon"></Label>
                 <Label col="1" text="Contact"></Label>
                 </GridLayout>
-                <StackLayout class="hr"></StackLayout>
-
 
             </StackLayout>
         </ScrollView>
@@ -54,29 +52,38 @@
 </StackLayout>
 
 <StackLayout row="1">
-    <GridLayout columns="*,*,*,*,*">
-       <StackLayout col="0" (tap)="onNavItemTap('/home')" class="bottomtext" [class.-selected]="isComponentSelected('/home')">
-    <Image src="res://home1" stretch="aspectFill" class="iconimg"></Image>
+    <GridLayout columns="*,*,*,*,*" backgroundcolor= "black">
+
+        <StackLayout col="0" (tap)="onNavItemTap('/home')" class="bottomtext" [class.-selected]="isComponentSelected('/home')">
+        <Label text="&#xf015;" class="fa sidedrawer-icon"></Label>
     <Label text="Home"></Label>
     </StackLayout>
 
+
+
     <StackLayout col="1" (tap)="onNavItemTap('/news')" class="bottomtext" [class.-selected]="isComponentSelected('/news')">
-        <Image src="res://news" stretch="aspectFill" class="iconimg"></Image>
+        <Label text="&#xf1ea;" class="fa sidedrawer-icon"></Label>
         <Label text="News"></Label>
         </StackLayout>
 
+
+
         <StackLayout col="2" (tap)="onNavItemTap('/bicycle')" class="bottomtext" [class.-selected]="isComponentSelected('/bicycle')">
-            <Image src="res://feature" stretch="aspectFill" class="iconimg"></Image>
+            <Label text="&#xf206;" class="fa sidedrawer-icon"></Label>
             <Label text="Bicycle"></Label>
             </StackLayout>
 
+
+
             <StackLayout col="3" (tap)="onNavItemTap('/aboutus')" class="bottomtext" [class.-selected]="isComponentSelected('/aboutus')">
-                <Image src="res://about" stretch="aspectFill" class="iconimg"></Image>
+                <Label text="&#xf129;" class="fa sidedrawer-icon"></Label>
                 <Label text="About Us"></Label>
                 </StackLayout>
+w
 
-                <StackLayout col="4" (tap)="onNavItemTap('/contact')" class="bottomtext" [class.-selected]="isComponentSelected('/contact')">
-                    <Image src="res://contact" stretch="aspectFill" class="iconimg"></Image>
+
+                <StackLayout col="4" (tap)="onNavItemTap('/contact')" class="bottomtext"  [class.-selected]="isComponentSelected('/contact')">
+                    <Label text="&#xf2b9;" class="fa sidedrawer-icon"></Label>
                     <Label text="Contact"></Label>
                     </StackLayout>
 

@@ -1,10 +1,15 @@
 <GridLayout rows="*,auto">
     <StackLayout row="0">
-  <ActionBar class="action">
-  <NavigationButton ios:visibility="collapsed" icon="res://menu" class="icon" (tap)="onDrawerButtonTap()"></NavigationButton>
-  <Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
-  </ActionBar>
-  </StackLayout>
+        <ActionBar class="action">
+            <StackLayout orientation="horizontal">
+                <GridLayout>
+            <Label text="&#xf0c9;" class="fa sidedrawer-icon" (tap)="onDrawerButtonTap()" horizontalAlignment="left" ></Label>
+            <Image src="res://logo1"  stretch="aspectFill" class="logo" ></Image>
+           <Button text="Share" (tap)="shareUrl()" horizontalAlignment="right" color="white" backgroundcolor="black" ></Button>
+       </GridLayout>
+       </StackLayout>
+       </ActionBar>
+       </StackLayout>
 
   <ScrollView>
     <StackLayout>
